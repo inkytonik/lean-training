@@ -29,7 +29,7 @@ lemma monotonicPowerOf2 :
 lemma addPowerOf2 (n m : ℕ) :
   powerOf2 n * powerOf2 m = powerOf2 (n + m) :=
 begin
-  induction n; simp [powerOf2], rw [mul_assoc, n_ih, succ_add], ring,
+  induction n; simp [powerOf2], rw [mul_assoc, n_ih, succ_add], simp [powerOf2],
 end
 
 inductive tree : Type
